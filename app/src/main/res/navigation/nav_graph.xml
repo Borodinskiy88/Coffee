@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registrationFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ru.borodinskiy.aleksei.coffee.ui.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="@string/enter">
+        <action
+            android:id="@+id/action_loginFragment_to_coffeeShopsFragment"
+            app:destination="@id/coffeeShopsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="ru.borodinskiy.aleksei.coffee.ui.RegistrationFragment"
+        tools:layout="@layout/fragment_registration"
+        android:label="@string/registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeShopsFragment"
+        android:name="ru.borodinskiy.aleksei.coffee.ui.CoffeeShopsFragment"
+        android:label="@string/nearest_shops"
+        tools:layout="@layout/fragment_coffee_shops" >
+        <action
+            android:id="@+id/action_coffeeShopsFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_coffeeShopsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="ru.borodinskiy.aleksei.coffee.ui.MapFragment"
+        tools:layout="@layout/fragment_map"
+        android:label="@string/map">
+        <action
+            android:id="@+id/action_mapFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_coffeeShopsFragment"
+            app:destination="@id/coffeeShopsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ru.borodinskiy.aleksei.coffee.ui.MenuFragment"
+        tools:layout="@layout/fragment_menu"
+        android:label="@string/menu">
+        <action
+            android:id="@+id/action_menuFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="ru.borodinskiy.aleksei.coffee.ui.OrderFragment"
+        android:label="@string/your_order"
+        tools:layout="@layout/fragment_order" >
+        <action
+            android:id="@+id/action_orderFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>

@@ -15,4 +15,8 @@
     <string name="image">Image</string>
     <string name="pay">Pay</string>
     <string name="order_time">Время ожидания заказа \n15 минут! \nСпасибо что выбрали нас!</string>
+    <string name="nearest_shops">Nearest shops</string>
+    <string name="map">Map</string>
+    <string name="menu">Menu</string>
+    <string name="your_order">Your order</string>
 </resources>

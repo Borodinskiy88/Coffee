@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/size_160"
     android:layout_height="@dimen/size_200"
-    android:layout_marginHorizontal="@dimen/size_8"
-    android:layout_marginVertical="@dimen/size_2">
+    android:layout_marginHorizontal="@dimen/size_24"
+    android:layout_marginBottom="@dimen/size_16">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
