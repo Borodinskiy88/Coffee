@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coffee</string>
+    <string name="login">Вход</string>
+    <string name="password">Пароль</string>
+    <string name="registration">Регистрация</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="enter">Вход</string>
+    <string name="on_the_map">На карте</string>
+    <string name="minus">Минус</string>
+    <string name="plus">Плюс</string>
+    <string name="proceed_to_payment">Перейти к оплате</string>
+    <string name="image">Изображение</string>
+    <string name="pay">Оплатить</string>
+    <string name="nearest_shops">Ближайшие кофейни</string>
+    <string name="map">Карта</string>
+    <string name="menu">Меня</string>
+    <string name="your_order">Ваш заказ</string>
+</resources>

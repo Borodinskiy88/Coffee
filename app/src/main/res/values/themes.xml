@@ -32,7 +32,7 @@
     <style name="Theme.Coffee" parent="Base.Theme.Coffee" />
 
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>
