@@ -12,9 +12,9 @@ class AuthRepositoryImpl @Inject constructor(
     private val apiService: ApiService
 ) : AuthRepository {
 
-    override suspend fun login(login: String, password: String): AuthModel {
+    override suspend fun login(user: User): AuthModel {
         try {
-            val response = apiService.login(login, password)
+            val response = apiService.login(user)
 
             if (!response.isSuccessful) {
                 throw ApiError(response.code(), response.message())
@@ -32,9 +32,9 @@ class AuthRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun register(login: String, password: String): AuthModel {
+    override suspend fun register(user: User): AuthModel {
         try {
-            val response = apiService.register(login, password)
+            val response = apiService.register(user)
 
             if (!response.isSuccessful) {
                 throw ApiError(response.code(), response.message())

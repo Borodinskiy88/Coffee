@@ -16,17 +16,22 @@ import ru.borodinskiy.aleksei.coffee.model.AuthModel
 interface ApiService {
 
     //auth
-    @FormUrlEncoded
+    @Headers(
+        "Content-Type: application/json",
+        "Accept: application/json"
+    )
     @POST("auth/login")
     suspend fun login(
-        @Field("login") login: String,
-        @Field("password") password: String
+        @Body user: User
     ): Response<AuthModel>
 
-//    @FormUrlEncoded
+    @Headers(
+        "Content-Type: application/json",
+        "Accept: application/json"
+    )
     @POST("auth/register")
     suspend fun register(
-    @Body login: String, password: String
+    @Body user: User
     ): Response<AuthModel>
 
     @GET("location/{id}/menu")

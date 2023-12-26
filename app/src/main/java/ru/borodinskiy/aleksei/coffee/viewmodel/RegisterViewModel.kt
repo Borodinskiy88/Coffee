@@ -31,12 +31,12 @@ class RegisterViewModel @Inject constructor(
         get() = _state
 
 
-    fun register(login: String, password: String) = viewModelScope.launch {
-        if (login.isNotBlank() && password.isNotBlank()) {
+    fun register(user: User) = viewModelScope.launch {
+        if (user.login.isNotBlank() && user.password.isNotBlank()) {
 
                 try {
                     _state.value = AuthModelState(loading = true)
-                    val result = repository.register(login, password)
+                    val result = repository.register(user)
                     appAuth.setAuth(result.tokenLifetime, result.token)
                     _state.value = AuthModelState(successfulEntry = true)
                 } catch (e: Exception) {

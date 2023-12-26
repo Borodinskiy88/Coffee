@@ -12,6 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.coffee.R
 import ru.borodinskiy.aleksei.coffee.databinding.FragmentCoffeeShopsBinding
 import ru.borodinskiy.aleksei.coffee.databinding.FragmentLoginBinding
+import ru.borodinskiy.aleksei.coffee.dto.User
 import ru.borodinskiy.aleksei.coffee.viewmodel.LoginViewModel
 
 @AndroidEntryPoint
@@ -31,7 +32,7 @@ class LoginFragment : Fragment() {
             logButton.setOnClickListener {
                 val login = login.text.toString()
                 val password = password.text.toString()
-                viewModel.login(login, password)
+                viewModel.login(User(login, password))
             }
 
         }
@@ -41,7 +42,7 @@ class LoginFragment : Fragment() {
             binding.logButton.isEnabled = !state.loading
 
             if (state.successfulEntry) {
-                findNavController().navigateUp()
+                findNavController().navigate(R.id.action_loginFragment_to_coffeeShopsFragment)
             }
 
             if (state.isBlank) {

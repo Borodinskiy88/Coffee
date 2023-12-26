@@ -8,6 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.coffee.api.ApiService
 import ru.borodinskiy.aleksei.coffee.auth.AppAuth
+import ru.borodinskiy.aleksei.coffee.dto.User
 import ru.borodinskiy.aleksei.coffee.error.ApiError
 import ru.borodinskiy.aleksei.coffee.model.AuthModelState
 import ru.borodinskiy.aleksei.coffee.repository.AuthRepository
@@ -24,15 +25,15 @@ class LoginViewModel @Inject constructor(
     val state: LiveData<AuthModelState>
         get() = _state
 
-    fun login(login: String, password: String) = viewModelScope.launch {
-        if (login.isNotBlank() && password.isNotBlank()) {
+    fun login(user: User) = viewModelScope.launch {
+        if (user.login.isNotBlank() && user.password.isNotBlank()) {
             try {
                 _state.value = AuthModelState(loading = true)
-                val result = repository.login(login, password)
+                val result = repository.login(user)
                 appAuth.setAuth(result.tokenLifetime, result.token)
                 _state.value = AuthModelState(successfulEntry = true)
             } catch (e: Exception) {
-                val postsResponse = apiService.login(login, password)
+                val postsResponse = apiService.login(user)
                 when (e) {
                     is ApiError -> if (postsResponse.code() == 404 || postsResponse.code() == 400) _state.value =
                         AuthModelState(invalidLoginOrPassword = true)
