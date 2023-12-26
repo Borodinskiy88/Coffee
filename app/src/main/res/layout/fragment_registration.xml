@@ -20,12 +20,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email"
-            app:layout_constraintBottom_toTopOf="@id/login_log_layout"
+            app:layout_constraintBottom_toTopOf="@id/login_layout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_log_layout"
+            android:id="@+id/login_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@id/email_title">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/login_log"
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -52,12 +52,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_16"
             android:text="@string/password"
-            app:layout_constraintBottom_toBottomOf="@id/password_log_layout"
+            app:layout_constraintBottom_toBottomOf="@id/password_layout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/login_log_layout" />
+            app:layout_constraintTop_toBottomOf="@id/login_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_log_layout"
+            android:id="@+id/password_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@id/password_title">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_log"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -86,12 +86,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_16"
             android:text="@string/repeat_password"
-            app:layout_constraintBottom_toTopOf="@id/repeat_password_log_layout"
+            app:layout_constraintBottom_toTopOf="@id/repeat_password_layout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/password_log_layout" />
+            app:layout_constraintTop_toBottomOf="@id/password_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/repeat_password_log_layout"
+            android:id="@+id/repeat_password_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
             app:layout_constraintTop_toBottomOf="@id/repeat_password_title">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/repeat_password_log"
+                android:id="@+id/repeat_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -125,7 +125,7 @@
             android:textSize="@dimen/text_18"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/repeat_password_log_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/repeat_password_layout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
