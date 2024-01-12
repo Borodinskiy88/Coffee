@@ -16,4 +16,9 @@
     <string name="map">Карта</string>
     <string name="menu">Меня</string>
     <string name="your_order">Ваш заказ</string>
+    <string name="passwords_must_match">Пароли должны совпадать</string>
+    <string name="it_is_necessary_to_fill_in_all_fields">Необходимо заполнить все поля</string>
+    <string name="something_went_wrong_try_again_later">Что-то пошло не так. Попробуйте еще раз позже</string>
+    <string name="login_or_password_is_blank">Логин или пароль не указаны</string>
+    <string name="invalid_login_or_password">Неверный логин или пароль</string>
 </resources>

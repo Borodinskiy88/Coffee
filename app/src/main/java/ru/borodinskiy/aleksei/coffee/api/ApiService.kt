@@ -17,8 +17,8 @@ interface ApiService {
 
     //auth
     @Headers(
-        "Content-Type: application/json",
-        "Accept: application/json"
+        "Accept: application/json",
+        "Content-Type: application/json"
     )
     @POST("auth/login")
     suspend fun login(
@@ -26,19 +26,27 @@ interface ApiService {
     ): Response<AuthModel>
 
     @Headers(
-        "Content-Type: application/json",
-        "Accept: application/json"
+        "Accept: application/json",
+        "Content-Type: application/json"
     )
     @POST("auth/register")
     suspend fun register(
     @Body user: User
     ): Response<AuthModel>
 
+    @Headers(
+        "Accept: application/json",
+        "Content-Type: application/json"
+    )
     @GET("location/{id}/menu")
     suspend fun getMenu(
         @Path("id") id: Int,
     ): Menu
 
-    @GET("location")
+    @Headers(
+        "Accept: application/json",
+        "Content-Type: application/json"
+    )
+    @GET("locations")
     suspend fun getShops(): Shops
 }

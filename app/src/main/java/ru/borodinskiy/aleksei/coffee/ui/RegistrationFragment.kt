@@ -54,8 +54,8 @@ class RegistrationFragment : Fragment() {
             binding.regButton.isEnabled = !state.loading
 
             if (state.successfulEntry) {
-//                findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
-                findNavController().navigateUp()
+                findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
+//                findNavController().navigateUp()
             }
 
             if (state.isBlank) {

@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_coffeeShopsFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_coffeeShopsFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -61,6 +64,9 @@
         <action
             android:id="@+id/action_menuFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_coffeeShopsFragment"
+            app:destination="@id/coffeeShopsFragment" />
     </fragment>
     <fragment
         android:id="@+id/orderFragment"

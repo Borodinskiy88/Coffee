@@ -66,7 +66,7 @@
             android:id="@+id/count"
             app:layout_constraintEnd_toStartOf="@id/plus"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="3"
+            tools:text="0"
             android:layout_marginEnd="@dimen/size_12"
             android:textStyle="bold"
             android:textSize="@dimen/text_14"

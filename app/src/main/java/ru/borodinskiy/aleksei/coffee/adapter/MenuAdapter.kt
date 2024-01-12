@@ -9,11 +9,10 @@ import ru.borodinskiy.aleksei.coffee.databinding.CardMenuBinding
 import ru.borodinskiy.aleksei.coffee.dto.Menu
 import ru.borodinskiy.aleksei.coffee.utils.LoadImage.load
 
-class MenuAdapter() :
+class MenuAdapter :
     ListAdapter<Menu, MenuAdapter.MenuViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
-
 
         return MenuViewHolder(
             CardMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
